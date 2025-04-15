@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 16 100% 50%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 16 100% 50%;
+    --radius: 1rem;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 16 100% 50%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 16 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings:
+      'rlig' 1,
+      'calt' 1;
+  }
+}
+
+/* Custom styles */
+.hero-gradient {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.7)
+  );
+}
+
+.food-card {
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.food-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 20px -10px rgba(0, 0, 0, 0.1);
+}
+
+.vendor-card {
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.vendor-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 20px -10px rgba(0, 0, 0, 0.1);
+}
+
+.category-pill {
+  transition: all 0.2s ease;
+}
+
+.category-pill:hover {
+  transform: translateY(-2px);
+}
+
+.search-container {
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.search-container:focus-within {
+  transform: scale(1.01);
+}
+
+.add-button {
+  transition: all 0.15s ease;
+}
+
+.add-button:hover {
+  transform: scale(1.1);
+}
+
+.add-button:active {
+  transform: scale(0.95);
+}
+
+.cart-item {
+  transition: background-color 0.2s ease;
+}
+
+.cart-item:hover {
+  background-color: rgba(0, 0, 0, 0.01);
+}
+
+.quantity-button {
+  transition: all 0.15s ease;
+}
+
+.quantity-button:hover {
+  transform: scale(1.1);
+}
+
+.quantity-button:active {
+  transform: scale(0.95);
+}
+
+.checkout-button {
+  transition: all 0.2s ease;
+}
+
+.checkout-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px -8px rgba(0, 0, 0, 0.2);
+}
+
+.checkout-button:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+@keyframes custom-rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loader-animation {
+  animation: custom-rotation 1s linear infinite;
+}
+
+body {
+  font-family: 'Sora', serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+/* Custom shimmer effect for enhanced loading states */
+.animate-shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.2) 20%,
+    rgba(255, 255, 255, 0.5) 60%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-size: 200% 100%;
+  background-repeat: no-repeat;
+}
