@@ -9,6 +9,8 @@
     "paths": {
       "@/*": ["src/*"]
     },
-    "noImplicitAny": true
+    "noImplicitAny": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false
   }
 }
