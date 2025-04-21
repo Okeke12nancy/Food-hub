@@ -1,27 +1,27 @@
-import React from "react"
-import { format } from "date-fns"
-import { Package2 } from "lucide-react"
+import React from 'react';
+import { format } from 'date-fns';
+import { Package2 } from 'lucide-react';
 
 interface InvoiceItem {
-  id: string
-  name: string
-  quantity: number
-  price: number
+  id: string;
+  name: string;
+  quantity: number;
+  price: number;
 }
 
 interface InvoiceProps {
-  invoiceNumber: string
-  orderDate: Date
-  customerName: string
-  customerEmail: string
-  customerAddress: string
-  items: InvoiceItem[]
-  subtotal: number
-  tax: number
-  total: number
-  paymentMethod: string
-  vendorName: string
-  vendorAddress: string
+  invoiceNumber: string;
+  orderDate: Date;
+  customerName: string;
+  customerEmail: string;
+  customerAddress: string;
+  items: InvoiceItem[];
+  subtotal: number;
+  tax: number;
+  total: number;
+  paymentMethod: string;
+  vendorName: string;
+  vendorAddress: string;
 }
 
 export const InvoiceTemplate = React.forwardRef<HTMLDivElement, InvoiceProps>(
@@ -40,7 +40,7 @@ export const InvoiceTemplate = React.forwardRef<HTMLDivElement, InvoiceProps>(
       vendorName,
       vendorAddress,
     },
-    ref,
+    ref
   ) => {
     return (
       <div ref={ref} className="bg-white p-8 shadow-lg max-w-3xl mx-auto">
@@ -55,7 +55,9 @@ export const InvoiceTemplate = React.forwardRef<HTMLDivElement, InvoiceProps>(
           <div className="text-right">
             <h2 className="text-xl font-bold">INVOICE</h2>
             <p className="text-sm text-gray-500">#{invoiceNumber}</p>
-            <p className="text-sm text-gray-500 mt-1">Date: {format(orderDate, "MMMM dd, yyyy")}</p>
+            <p className="text-sm text-gray-500 mt-1">
+              Date: {format(orderDate, 'MMMM dd, yyyy')}
+            </p>
           </div>
         </div>
 
@@ -64,12 +66,16 @@ export const InvoiceTemplate = React.forwardRef<HTMLDivElement, InvoiceProps>(
             <h3 className="text-gray-500 font-medium mb-2">Bill To:</h3>
             <p className="font-medium">{customerName}</p>
             <p className="text-sm text-gray-500">{customerEmail}</p>
-            <p className="text-sm text-gray-500 whitespace-pre-line">{customerAddress}</p>
+            <p className="text-sm text-gray-500 whitespace-pre-line">
+              {customerAddress}
+            </p>
           </div>
           <div>
             <h3 className="text-gray-500 font-medium mb-2">Vendor:</h3>
             <p className="font-medium">{vendorName}</p>
-            <p className="text-sm text-gray-500 whitespace-pre-line">{vendorAddress}</p>
+            <p className="text-sm text-gray-500 whitespace-pre-line">
+              {vendorAddress}
+            </p>
           </div>
         </div>
 
@@ -77,10 +83,18 @@ export const InvoiceTemplate = React.forwardRef<HTMLDivElement, InvoiceProps>(
           <table className="w-full">
             <thead>
               <tr className="border-b border-gray-200">
-                <th className="py-2 text-left font-medium text-gray-500">Item</th>
-                <th className="py-2 text-right font-medium text-gray-500">Qty</th>
-                <th className="py-2 text-right font-medium text-gray-500">Price</th>
-                <th className="py-2 text-right font-medium text-gray-500">Total</th>
+                <th className="py-2 text-left font-medium text-gray-500">
+                  Item
+                </th>
+                <th className="py-2 text-right font-medium text-gray-500">
+                  Qty
+                </th>
+                <th className="py-2 text-right font-medium text-gray-500">
+                  Price
+                </th>
+                <th className="py-2 text-right font-medium text-gray-500">
+                  Total
+                </th>
               </tr>
             </thead>
             <tbody>
@@ -89,7 +103,9 @@ export const InvoiceTemplate = React.forwardRef<HTMLDivElement, InvoiceProps>(
                   <td className="py-4">{item.name}</td>
                   <td className="py-4 text-right">{item.quantity}</td>
                   <td className="py-4 text-right">${item.price.toFixed(2)}</td>
-                  <td className="py-4 text-right">${(item.quantity * item.price).toFixed(2)}</td>
+                  <td className="py-4 text-right">
+                    ${(item.quantity * item.price).toFixed(2)}
+                  </td>
                 </tr>
               ))}
             </tbody>
@@ -116,11 +132,15 @@ export const InvoiceTemplate = React.forwardRef<HTMLDivElement, InvoiceProps>(
         <div className="mt-8 border-t border-gray-200 pt-4">
           <div className="flex justify-between">
             <div>
-              <h3 className="text-gray-500 font-medium mb-2">Payment Method:</h3>
+              <h3 className="text-gray-500 font-medium mb-2">
+                Payment Method:
+              </h3>
               <p>{paymentMethod}</p>
             </div>
             <div className="text-right">
-              <h3 className="text-gray-500 font-medium mb-2">Payment Status:</h3>
+              <h3 className="text-gray-500 font-medium mb-2">
+                Payment Status:
+              </h3>
               <p className="text-green-600 font-medium">PAID</p>
             </div>
           </div>
@@ -128,11 +148,14 @@ export const InvoiceTemplate = React.forwardRef<HTMLDivElement, InvoiceProps>(
 
         <div className="mt-8 text-center text-sm text-gray-500">
           <p>Thank you for your order!</p>
-          <p className="mt-1">This invoice serves as proof of payment. Please show it to the vendor upon delivery.</p>
+          <p className="mt-1">
+            This invoice serves as proof of payment. Please show it to the
+            vendor upon delivery.
+          </p>
         </div>
       </div>
-    )
-  },
-)
+    );
+  }
+);
 
-InvoiceTemplate.displayName = "InvoiceTemplate"
+InvoiceTemplate.displayName = 'InvoiceTemplate';
