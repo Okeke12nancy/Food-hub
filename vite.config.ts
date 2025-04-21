@@ -9,9 +9,6 @@ import tsconfigPaths from 'vite-tsconfig-paths';
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tsconfigPaths({ loose: true }), svgr(), imagetools()],
-  define: {
-    'process.env': process.env,
-  },
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
