@@ -29,7 +29,7 @@ const Login = () => {
     defaultValues: defaultValues,
   });
 
-  const { mutateAsync, isPending } = useMutation({
+  const { mutateAsync } = useMutation({
     mutationFn: loginUser,
     // onSuccess: (response) => {
     //   if (response.status === 200 || response.status === 201) {
