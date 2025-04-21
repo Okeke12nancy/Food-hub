@@ -53,7 +53,7 @@ export function DownloadInvoiceButton({
     <Button
       variant={variant}
       size={size}
-      // onClick={handleDownload}
+      onClick={handleDownload}
       disabled={isLoading}
     >
       <Download className="mr-2 h-4 w-4" />
