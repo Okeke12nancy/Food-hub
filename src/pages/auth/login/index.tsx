@@ -6,7 +6,7 @@ import { useMutation } from '@tanstack/react-query';
 import InputErrorWrapper from '@/components/custom/input-error-wrapper';
 import { Input } from '@/components/ui/input';
 import { PasswordInput } from '@/components/custom/password-input';
-import { Button } from '@/components/ui/button';
+// import { Button } from '@/components/ui/button';
 // import { useCurrentUserState } from '@/stores/user.store';
 
 const Login = () => {
@@ -63,14 +63,14 @@ const Login = () => {
           <PasswordInput {...register('password')} />
         </InputErrorWrapper>
 
-        <Button
+        {/* <Button
           type="submit"
-          layout={'full'}
+          className="w-full"
           isSubmitting={isPending}
           disabled={isPending}
         >
           Login
-        </Button>
+        </Button> */}
       </form>
     </>
   );
