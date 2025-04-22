@@ -78,7 +78,7 @@ export default function Cart() {
                   <div className="flex-1">
                     <h3 className="font-bold text-lg">{item.name}</h3>
                     <p className="text-primary font-medium">
-                      ${item.price.toFixed(2)}
+                      <span>₦{item.price.toFixed(2)}</span>
                     </p>
                   </div>
                   <div className="flex items-center gap-3">
