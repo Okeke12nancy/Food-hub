@@ -337,9 +337,9 @@ export default function Vendor() {
         <div className="mb-6 flex justify-between items-center">
           <p className="text-muted-foreground">
             {filteredVendors.length}{' '}
-            {filteredVendors.length === 1 ? 'restaurant' : 'restaurants'} found
+            {filteredVendors.length === 1 ? 'Vendor' : 'Vendors'} found
           </p>
-          <Select defaultValue="recommended">
+          {/* <Select defaultValue="recommended">
             <SelectTrigger className="w-[180px]">
               <SelectValue placeholder="Sort by" />
             </SelectTrigger>
@@ -348,7 +348,7 @@ export default function Vendor() {
               <SelectItem value="rating">Highest Rated</SelectItem>
               <SelectItem value="delivery">Fastest Delivery</SelectItem>
             </SelectContent>
-          </Select>
+          </Select> */}
         </div>
 
         {filteredVendors.length > 0 ? (
@@ -360,7 +360,7 @@ export default function Vendor() {
         ) : (
           <div className="flex flex-col items-center justify-center py-16">
             <p className="text-muted-foreground text-center mb-4">
-              No restaurants found
+              No Vendor found
             </p>
             <p className="text-sm text-muted-foreground text-center mb-6">
               Try adjusting your filters or search for something else

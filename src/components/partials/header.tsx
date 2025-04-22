@@ -80,7 +80,7 @@ export default function Header() {
                     : 'text-muted-foreground hover:text-foreground'
                 )}
               >
-                Restaurants
+                Vendors
               </Link>
             </nav>
             <div className="hidden md:block">
@@ -89,7 +89,7 @@ export default function Header() {
                   <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
                   <Input
                     type="search"
-                    placeholder="Search for food or restaurants..."
+                    placeholder="Search for food or vendors..."
                     className="w-[300px] pl-10 rounded-full border-none bg-secondary"
                     value={searchValue}
                     onChange={(e) => setSearchValue(e.target.value)}

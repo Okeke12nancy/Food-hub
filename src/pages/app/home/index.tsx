@@ -22,7 +22,7 @@ export default function Home() {
             Delicious food delivered to your doorstep
           </h1>
           <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl">
-            Order from your favorite local restaurants with just a few taps
+            Order from your favorite local vendor with just a few taps
           </p>
           <form
             onSubmit={(e) => {
@@ -38,7 +38,7 @@ export default function Home() {
             <Search className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-muted-foreground" />
             <Input
               type="search"
-              placeholder="Search for food or restaurants..."
+              placeholder="Search for food or vendor..."
               className="w-full h-14 pl-12 pr-4 rounded-full border-none bg-white/90 backdrop-blur-md text-black shadow-lg"
             />
           </form>
@@ -54,7 +54,7 @@ export default function Home() {
 
         <div className="mb-12">
           <div className="flex items-center justify-between mb-6">
-            <h2 className="text-2xl font-bold">Popular restaurants</h2>
+            <h2 className="text-2xl font-bold">Vendors</h2>
             <Link
               to="/vendor"
               className="text-primary font-medium hover:underline flex items-center"
@@ -101,7 +101,7 @@ export default function Home() {
           </div>
         </div> */}
 
-        <div>
+        {/* <div>
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-2xl font-bold">Trending this week</h2>
             <Link
@@ -117,7 +117,7 @@ export default function Home() {
               <VendorCard key={vendor.id} vendor={vendor} />
             ))}
           </div>
-        </div>
+        </div> */}
       </section>
 
       {/* Footer */}
