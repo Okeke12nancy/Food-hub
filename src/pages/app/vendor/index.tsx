@@ -219,7 +219,7 @@ export default function Vendor() {
                             )
                           }
                         >
-                          $
+                          ₦
                         </Button>
                         <Button
                           variant={
@@ -232,7 +232,7 @@ export default function Vendor() {
                             )
                           }
                         >
-                          $$
+                          ₦₦
                         </Button>
                         <Button
                           variant={
@@ -245,7 +245,7 @@ export default function Vendor() {
                             )
                           }
                         >
-                          $$$
+                          ₦₦₦
                         </Button>
                       </div>
                     </div>
@@ -337,9 +337,9 @@ export default function Vendor() {
         <div className="mb-6 flex justify-between items-center">
           <p className="text-muted-foreground">
             {filteredVendors.length}{' '}
-            {filteredVendors.length === 1 ? 'restaurant' : 'restaurants'} found
+            {filteredVendors.length === 1 ? 'Vendor' : 'Vendors'} found
           </p>
-          <Select defaultValue="recommended">
+          {/* <Select defaultValue="recommended">
             <SelectTrigger className="w-[180px]">
               <SelectValue placeholder="Sort by" />
             </SelectTrigger>
@@ -348,7 +348,7 @@ export default function Vendor() {
               <SelectItem value="rating">Highest Rated</SelectItem>
               <SelectItem value="delivery">Fastest Delivery</SelectItem>
             </SelectContent>
-          </Select>
+          </Select> */}
         </div>
 
         {filteredVendors.length > 0 ? (
@@ -360,7 +360,7 @@ export default function Vendor() {
         ) : (
           <div className="flex flex-col items-center justify-center py-16">
             <p className="text-muted-foreground text-center mb-4">
-              No restaurants found
+              No Vendor found
             </p>
             <p className="text-sm text-muted-foreground text-center mb-6">
               Try adjusting your filters or search for something else
@@ -383,7 +383,7 @@ const vendors: Vendor[] = [
     deliveryTime: '25-35 min',
     categories: ['Fast Food', 'Burgers', 'Chicken'],
     location: 'Downtown',
-    priceRange: '$$',
+    priceRange: '₦₦',
   },
   {
     id: 2,
@@ -393,7 +393,7 @@ const vendors: Vendor[] = [
     deliveryTime: '20-30 min',
     categories: ['Healthy', 'Salads', 'Vegan'],
     location: 'Uptown',
-    priceRange: '$$$',
+    priceRange: '₦₦₦',
   },
   {
     id: 3,
@@ -403,7 +403,7 @@ const vendors: Vendor[] = [
     deliveryTime: '30-45 min',
     categories: ['Indian', 'Curry', 'Spicy'],
     location: 'Midtown',
-    priceRange: '$$',
+    priceRange: '₦₦',
   },
   {
     id: 4,
@@ -413,7 +413,7 @@ const vendors: Vendor[] = [
     deliveryTime: '20-35 min',
     categories: ['Italian', 'Pizza', 'Pasta'],
     location: 'West Side',
-    priceRange: '$$',
+    priceRange: '₦₦',
   },
   {
     id: 5,
@@ -423,7 +423,7 @@ const vendors: Vendor[] = [
     deliveryTime: '25-40 min',
     categories: ['Japanese', 'Sushi', 'Asian'],
     location: 'Downtown',
-    priceRange: '$$$',
+    priceRange: '₦₦₦',
   },
   {
     id: 6,
@@ -433,7 +433,7 @@ const vendors: Vendor[] = [
     deliveryTime: '15-30 min',
     categories: ['Mexican', 'Tacos', 'Burritos'],
     location: 'East Side',
-    priceRange: '$',
+    priceRange: '₦',
   },
   {
     id: 7,
@@ -443,7 +443,7 @@ const vendors: Vendor[] = [
     deliveryTime: '20-35 min',
     categories: ['Fast Food', 'Burgers', 'Fries'],
     location: 'Midtown',
-    priceRange: '$',
+    priceRange: '₦',
   },
   {
     id: 8,
@@ -453,7 +453,7 @@ const vendors: Vendor[] = [
     deliveryTime: '25-40 min',
     categories: ['Italian', 'Pasta', 'Pizza'],
     location: 'Uptown',
-    priceRange: '$$',
+    priceRange: '₦₦',
   },
   {
     id: 9,
@@ -463,7 +463,7 @@ const vendors: Vendor[] = [
     deliveryTime: '15-25 min',
     categories: ['Fast Food', 'Chicken', 'Fries'],
     location: 'East Side',
-    priceRange: '$',
+    priceRange: '₦',
   },
 ];
 

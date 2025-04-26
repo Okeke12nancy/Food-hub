@@ -9,6 +9,7 @@ import Checkout from '@/pages/app/checkout';
 import Search from '@/pages/app/search';
 import Vendor from '@/pages/app/vendor';
 import VendorDetails from '@/pages/app/vendor/details';
+import App from '@/pages/app/food-vendor';
 import Header from '@/components/partials/header';
 
 const router = createBrowserRouter([
@@ -70,6 +71,14 @@ const router = createBrowserRouter([
         element: (
           <Suspense fallback={<PageSuspense />}>
             <VendorDetails />
+          </Suspense>
+        ),
+      },
+      {
+        path: 'food-vendor',
+        element: (
+          <Suspense fallback={<PageSuspense />}>
+            <App />
           </Suspense>
         ),
       },
