@@ -10,11 +10,12 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Input } from '@/components/ui/input';
 import { cn } from '@/lib/utils';
 import { useCartStore } from '@/stores/cart-store';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 export default function Header() {
   const cartItems = useCartStore((state) => state.cartItems);
   const pathname = useLocation().pathname;
+  const navigate = useNavigate();
   const [isScrolled, setIsScrolled] = useState(false);
   const [searchValue, setSearchValue] = useState('');
   const itemCount = cartItems.reduce((total, item) => total + item.quantity, 0);
@@ -30,7 +31,7 @@ export default function Header() {
   const handleSearchSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (searchValue.trim()) {
-      window.location.href = `/search?q=${encodeURIComponent(searchValue)}`;
+      navigate(`/user/search?q=${encodeURIComponent(searchValue)}`);
     }
   };
 
@@ -55,16 +56,16 @@ export default function Header() {
                 className="w-[70px] h-[70px] object-contain"
               />
 
-              <Link to="/" className="text-2xl font-bold text-primary">
+              <Link to="/user" className="text-2xl font-bold text-primary">
                 Chow Hub
               </Link>
             </div>
             <nav className="hidden md:flex items-center space-x-6">
               <Link
-                to="/"
+                to="/user"
                 className={cn(
                   'text-sm font-medium transition-colors',
-                  pathname === '/'
+                  pathname === '/user'
                     ? 'text-foreground'
                     : 'text-muted-foreground hover:text-foreground'
                 )}
@@ -72,7 +73,7 @@ export default function Header() {
                 Home
               </Link>
               <Link
-                to="/vendor"
+                to="/user/vendor"
                 className={cn(
                   'text-sm font-medium transition-colors',
                   pathname === '/vendor' || pathname.startsWith('/vendor/')
@@ -100,10 +101,12 @@ export default function Header() {
           </div>
 
           <div className="hidden md:flex items-center gap-4">
+          <Link to="/user/profile">
             <Button variant="ghost" size="icon" className="rounded-full">
               <User className="h-5 w-5" />
             </Button>
-            <Link to="/cart">
+            </Link>
+            <Link to="/user/cart">
               <Button
                 variant="ghost"
                 size="icon"
@@ -120,7 +123,7 @@ export default function Header() {
           </div>
 
           <div className="md:hidden flex items-center gap-4">
-            <Link to="/cart">
+            <Link to="/user/cart">
               <Button
                 variant="ghost"
                 size="icon"
@@ -143,7 +146,7 @@ export default function Header() {
               <SheetContent side="right" className="w-[300px] sm:w-[400px]">
                 <div className="flex flex-col h-full">
                   <div className="flex items-center justify-between py-4">
-                    <Link to="/" className="text-xl font-bold text-primary">
+                    <Link to="/user" className="text-xl font-bold text-primary">
                       Foodie
                     </Link>
                     <SheetTrigger asChild>
@@ -175,25 +178,25 @@ export default function Header() {
                   </div>
                   <nav className="flex flex-col gap-2 py-4">
                     <Link
-                      to="/"
+                      to="/user"
                       className="px-4 py-2 hover:bg-secondary rounded-md"
                     >
                       Home
                     </Link>
                     <Link
-                      to="/vendor"
+                      to="/user/vendor"
                       className="px-4 py-2 hover:bg-secondary rounded-md"
                     >
                       Restaurants
                     </Link>
                     <Link
-                      to="/cart"
+                      to="/user/cart"
                       className="px-4 py-2 hover:bg-secondary rounded-md"
                     >
                       Cart
                     </Link>
                     <Link
-                      to="#"
+                      to="/user/profile"
                       className="px-4 py-2 hover:bg-secondary rounded-md"
                     >
                       Profile

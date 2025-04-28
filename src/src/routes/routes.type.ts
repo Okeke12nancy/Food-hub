@@ -16,6 +16,7 @@ export interface routeInterface<T = unknown>
 
 export const routeTypeEnums = z.enum([
   '',
+  '/user',
   '/cart',
   '/checkout',
   '/search',
