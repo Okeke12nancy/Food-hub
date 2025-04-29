@@ -210,12 +210,12 @@ export default function Vendor() {
                       <div className="grid grid-cols-3 gap-3">
                         <Button
                           variant={
-                            selectedPriceRange === '$' ? 'default' : 'outline'
+                            selectedPriceRange === '₦' ? 'default' : 'outline'
                           }
                           className="rounded-full"
                           onClick={() =>
                             setSelectedPriceRange(
-                              selectedPriceRange === '$' ? null : '$'
+                              selectedPriceRange === '₦' ? null : '₦'
                             )
                           }
                         >
@@ -223,29 +223,29 @@ export default function Vendor() {
                         </Button>
                         <Button
                           variant={
-                            selectedPriceRange === '$$' ? 'default' : 'outline'
+                            selectedPriceRange === '₦₦' ? 'default' : 'outline'
                           }
                           className="rounded-full"
                           onClick={() =>
                             setSelectedPriceRange(
-                              selectedPriceRange === '$$' ? null : '$$'
+                              selectedPriceRange === '₦₦' ? null : '₦₦'
                             )
                           }
                         >
-                          $$
+                          ₦₦
                         </Button>
                         <Button
                           variant={
-                            selectedPriceRange === '$$$' ? 'default' : 'outline'
+                            selectedPriceRange === '₦₦₦' ? 'default' : 'outline'
                           }
                           className="rounded-full"
                           onClick={() =>
                             setSelectedPriceRange(
-                              selectedPriceRange === '$$$' ? null : '$$$'
+                              selectedPriceRange === '₦₦₦' ? null : '₦₦₦'
                             )
                           }
                         >
-                          $$$
+                          ₦₦₦
                         </Button>
                       </div>
                     </div>
@@ -383,7 +383,7 @@ const vendors: Vendor[] = [
     deliveryTime: '25-35 min',
     categories: ['Fast Food', 'Burgers', 'Chicken'],
     location: 'Downtown',
-    priceRange: '$$',
+    priceRange: '₦₦',
   },
   {
     id: 2,
@@ -393,7 +393,7 @@ const vendors: Vendor[] = [
     deliveryTime: '20-30 min',
     categories: ['Healthy', 'Salads', 'Vegan'],
     location: 'Uptown',
-    priceRange: '$$$',
+    priceRange: '₦₦₦',
   },
   {
     id: 3,
@@ -403,7 +403,7 @@ const vendors: Vendor[] = [
     deliveryTime: '30-45 min',
     categories: ['Indian', 'Curry', 'Spicy'],
     location: 'Midtown',
-    priceRange: '$$',
+    priceRange: '₦₦₦',
   },
   {
     id: 4,
@@ -413,7 +413,7 @@ const vendors: Vendor[] = [
     deliveryTime: '20-35 min',
     categories: ['Italian', 'Pizza', 'Pasta'],
     location: 'West Side',
-    priceRange: '$$',
+    priceRange: '₦₦',
   },
   {
     id: 5,
@@ -423,7 +423,7 @@ const vendors: Vendor[] = [
     deliveryTime: '25-40 min',
     categories: ['Japanese', 'Sushi', 'Asian'],
     location: 'Downtown',
-    priceRange: '$$$',
+    priceRange: '₦₦₦',
   },
   {
     id: 6,
@@ -433,7 +433,7 @@ const vendors: Vendor[] = [
     deliveryTime: '15-30 min',
     categories: ['Mexican', 'Tacos', 'Burritos'],
     location: 'East Side',
-    priceRange: '$',
+    priceRange: '₦',
   },
   {
     id: 7,
@@ -443,7 +443,7 @@ const vendors: Vendor[] = [
     deliveryTime: '20-35 min',
     categories: ['Fast Food', 'Burgers', 'Fries'],
     location: 'Midtown',
-    priceRange: '$',
+    priceRange: '₦',
   },
   {
     id: 8,
@@ -453,7 +453,7 @@ const vendors: Vendor[] = [
     deliveryTime: '25-40 min',
     categories: ['Italian', 'Pasta', 'Pizza'],
     location: 'Uptown',
-    priceRange: '$$',
+    priceRange: '₦₦',
   },
   {
     id: 9,
@@ -463,7 +463,7 @@ const vendors: Vendor[] = [
     deliveryTime: '15-25 min',
     categories: ['Fast Food', 'Chicken', 'Fries'],
     location: 'East Side',
-    priceRange: '$',
+    priceRange: '₦',
   },
 ];
 

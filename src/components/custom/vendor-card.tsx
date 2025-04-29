@@ -17,7 +17,7 @@ interface VendorCardProps {
 
 export default function VendorCard({ vendor }: VendorCardProps) {
   return (
-    <Link to={`/vendor/${vendor.id}`}>
+    <Link to={`/user/vendor/${vendor.id}`}>
       <div className="vendor-card bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-md">
         <div className="relative w-full">
           <div className="w-full h-48">

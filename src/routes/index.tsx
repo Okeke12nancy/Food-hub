@@ -4,9 +4,9 @@ import { createBrowserRouter, Outlet } from 'react-router-dom';
 import Login from '@/pages/auth/login';
 import Home from '@/pages/app/home';
 import Cart from '@/pages/app/cart';
-import Profile from '@/pages/app/profile';
-import Orders from '@/pages/app/orders';
-import OrderDetails from '@/pages/app/orders/details';
+// import Profile from '@/pages/app/profile';
+// import Orders from '@/pages/app/orders';
+// import OrderDetails from '@/pages/app/orders/details';
 import Vendor from '@/pages/app/vendor';
 import VendorDetails from '@/pages/app/vendor/details';
 import Header from '@/components/partials/header';
@@ -19,6 +19,7 @@ import Settings from '@/Vendor/PagesVendor/Settings';
 import PageSuspense from '@/components/custom/page-suspense';
 import Checkout from '@/pages/app/checkout';
 import Search from '@/pages/app/search';
+import Profile from '@/pages/app/profile';
 
 const router = createBrowserRouter([
   {
@@ -80,6 +81,14 @@ const router = createBrowserRouter([
         element: (
           <Suspense fallback={<PageSuspense />}>
             <VendorDetails />
+          </Suspense>
+        ),
+      },
+      {
+        path: 'profile',
+        element: (
+          <Suspense fallback={<PageSuspense />}>
+            <Profile />
           </Suspense>
         ),
       },

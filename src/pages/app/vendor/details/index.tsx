@@ -58,7 +58,7 @@ export default function VendorDetails() {
         <div className="absolute inset-0 hero-gradient flex flex-col justify-end">
           <div className="container mx-auto px-4 pb-8">
             <Link
-              to="/vendor"
+              to="/user/vendor"
               className="inline-flex items-center gap-2 mb-4 text-white/90 hover:text-white"
             >
               <ArrowLeft className="h-4 w-4" />
