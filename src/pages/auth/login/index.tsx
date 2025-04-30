@@ -135,12 +135,11 @@ export default function LoginPage() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-gray-100 p-4">
       <div className="w-full max-w-5xl grid md:grid-cols-2 gap-8 items-center">
-        {/* Left side - Branding and info */}
         <div className="hidden md:flex flex-col space-y-6 p-6">
           <div className="space-y-2">
-            <h1 className="text-4xl font-bold tracking-tight text-gray-900">Delicious food, delivered to your door</h1>
+            <h1 className="text-4xl font-bold tracking-tight text-gray-900">Delicious food from the Favourite Vendors</h1>
             <p className="text-lg text-gray-600">
-              Order from your favorite restaurants and track your delivery in real-time.
+              Order your Favourite Food from your favorite restaurants 
             </p>
           </div>
 
@@ -406,7 +405,7 @@ export default function LoginPage() {
                               <FormItem>
                                 <FormLabel>Phone Number</FormLabel>
                                 <FormControl>
-                                  <Input placeholder="+1 (555) 123-4567" {...field} />
+                                  <Input placeholder="+(234)-123-4567" {...field} />
                                 </FormControl>
                                 <FormMessage />
                               </FormItem>
@@ -579,7 +578,7 @@ export default function LoginPage() {
                                 <FormItem>
                                   <FormLabel>Phone Number</FormLabel>
                                   <FormControl>
-                                    <Input placeholder="+1 (555) 123-4567" {...field} />
+                                    <Input placeholder="+(234)-123-4567" {...field} />
                                   </FormControl>
                                   <FormMessage />
                                 </FormItem>
@@ -748,7 +747,7 @@ export default function LoginPage() {
                 </TabsContent>
               </Tabs>
 
-              <div className="mt-6">
+              {/* <div className="mt-6">
                 <div className="relative">
                   <div className="absolute inset-0 flex items-center">
                     <Separator />
@@ -796,7 +795,7 @@ export default function LoginPage() {
                     Facebook
                   </Button>
                 </div>
-              </div>
+              </div> */}
             </CardContent>
             <CardFooter className="flex flex-col space-y-4">
               <div className="text-center text-sm text-gray-500">
