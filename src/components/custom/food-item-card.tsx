@@ -56,7 +56,7 @@ export default function FoodItemCard({ item, vendorId }: FoodItemProps) {
           </div>
           <div className="absolute top-2 left-2">
             <div className="bg-white px-3 py-1 rounded-full font-medium text-sm shadow-sm">
-              ${item.price.toFixed(2)}
+            ₦{item.price.toFixed(2)}
             </div>
           </div>
         </div>

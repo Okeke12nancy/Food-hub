@@ -38,7 +38,7 @@ export default function Cart() {
           Looks like you haven't added anything to your cart yet. Go ahead and
           explore our delicious options.
         </p>
-        <Link to="/vendor">
+        <Link to="/user/vendor">
           <Button className="rounded-full px-8 bg-primary hover:bg-primary/90">
             Browse Restaurants
           </Button>
@@ -78,7 +78,7 @@ export default function Cart() {
                   <div className="flex-1">
                     <h3 className="font-bold text-lg">{item.name}</h3>
                     <p className="text-primary font-medium">
-                      ${item.price.toFixed(2)}
+                    ₦{item.price.toFixed(2)}
                     </p>
                   </div>
                   <div className="flex items-center gap-3">
@@ -136,12 +136,12 @@ export default function Cart() {
               <div className="space-y-4">
                 <div className="flex justify-between">
                   <span className="text-muted-foreground">Subtotal</span>
-                  <span>${total.toFixed(2)}</span>
+                  <span>₦{total.toFixed(2)}</span>
                 </div>
                 {discount > 0 && (
                   <div className="flex justify-between text-green-600">
                     <span>Discount</span>
-                    <span>-${discount.toFixed(2)}</span>
+                    <span>-₦{discount.toFixed(2)}</span>
                   </div>
                 )}
                 <div className="flex gap-2">
@@ -162,12 +162,12 @@ export default function Cart() {
                 <Separator />
                 <div className="flex justify-between font-bold text-lg">
                   <span>Total</span>
-                  <span>${finalTotal.toFixed(2)}</span>
+                  <span>₦{finalTotal.toFixed(2)}</span>
                 </div>
                 <p className="text-xs text-muted-foreground">
                   * Try voucher codes: WELCOME20 or DISCOUNT10
                 </p>
-                <Link to="/checkout" className="w-full">
+                <Link to="/user/checkout" className="w-full">
                   <Button className="w-full bg-primary hover:bg-primary/90 rounded-full h-12 mt-2 checkout-button">
                     Proceed to Checkout
                   </Button>

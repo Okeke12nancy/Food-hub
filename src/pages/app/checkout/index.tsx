@@ -20,7 +20,7 @@ export default function Checkout() {
 
     // Redirect to success page after a delay
     setTimeout(() => {
-      navigate('/');
+      navigate('/user');
     }, 3000);
   };
 
@@ -34,7 +34,7 @@ export default function Checkout() {
         <p className="text-muted-foreground mb-8 text-center max-w-md">
           Thank you for your order. Your delicious food will be on its way soon!
         </p>
-        <Link to="/">
+        <Link to="/user">
           <Button className="rounded-full px-8 bg-primary hover:bg-primary/90">
             Return to Home
           </Button>
@@ -47,7 +47,7 @@ export default function Checkout() {
     <div className="bg-[#FAFAFA] min-h-screen pb-16">
       <div className="container mx-auto px-4 py-8">
         <Link
-          to="/cart"
+          to="/user/cart"
           className="inline-flex items-center gap-2 mb-6 text-muted-foreground hover:text-foreground"
         >
           <ArrowLeft className="h-4 w-4" />
